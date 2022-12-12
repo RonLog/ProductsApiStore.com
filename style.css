@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    color: white;
+    background-color: rgb(40, 116, 240);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.logo a span {
+    color: rgb(80, 230, 255);
+}
+
+.logo a:hover {
+    text-decoration: underline;
+}
+
+nav ul li {
+    font-weight: bold;
+    display: inline;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+nav ul ul li {
+    display: block;
+    height: 30px;
+    margin-top: 20px;
+    border-bottom: 1px solid lightgrey;
+    width: 230px;
+}
+
+nav ul ul {
+    display: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+#moresub {
+    display: none;
+    position: absolute;
+    right: 100px;
+    border-radius: 5px;
+}
+
+.more:hover #moresub {
+    display: block;
+}
+
+.search {
+    display: flex;
+    border: none;
+}
+
+.search input[type="text"] {
+    width: 700px;
+    height: 32px;
+    border: none;
+    outline: none;
+}
+
+.search button i {
+    color: rgb(40, 116, 240);
+    height: 30px;
+    font-size: 25px;
+    border: none;
+}
+
+.search button {
+    border: none;
+}
+
+.login input[type="button"] {
+    width: 130px;
+    font-weight: bold;
+    background-color: white;
+    color: rgb(40, 116, 240);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+    box-shadow: 0 0 4px 3px pink;
+    text-align: center;
+    padding: 1.5em;
+    margin-bottom: 2em;
+}
+
+.title {
+    font-size: 1.3rem;
+}
+
+.category,
+.price,
+.rating {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 1em;
+    font-size: 1.2rem;
+}
+
+.images {
+    width: 50%;
+    height: 30%;
+}
+
+.count {
+    color: rgb(113, 113, 113);
+}
+
+.addBuy {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.addtocart {
+    background-color: white;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    padding: 9px;
+    border: 1px solid black;
+    flex-basis: 50%;
+    border-radius: 5px;
+}
+
+.buynow {
+    background-color: orangered;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    flex-basis: 50%;
+    border-radius: 5px;
+}
