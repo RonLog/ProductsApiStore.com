@@ -133,7 +133,7 @@ nav ul li:hover ul {
     justify-content: center;
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 23%;
+    flex-basis: 320px;
     box-shadow: 0 0 4px 3px pink;
     text-align: center;
     padding: 1.5em;
