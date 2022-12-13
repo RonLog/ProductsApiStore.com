@@ -82,6 +82,7 @@ nav ul li:hover ul {
 .search {
     display: flex;
     border: none;
+    border-radius: 5px;
 }
 
 .search input[type="text"] {
@@ -89,6 +90,8 @@ nav ul li:hover ul {
     height: 32px;
     border: none;
     outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .search button i {
@@ -100,7 +103,10 @@ nav ul li:hover ul {
 
 .search button {
     border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+
 
 .login input[type="button"] {
     width: 130px;
@@ -116,7 +122,8 @@ nav ul li:hover ul {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 150px;
+    gap: 20px;
 }
 
 .card {
@@ -124,11 +131,10 @@ nav ul li:hover ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 23%;
+    flex: 1 23% 0;
     box-shadow: 0 0 4px 3px pink;
     text-align: center;
     padding: 1.5em;
-    margin-bottom: 2em;
 }
 
 .title {
@@ -169,6 +175,7 @@ nav ul li:hover ul {
     border: 1px solid black;
     flex-basis: 50%;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 .buynow {
@@ -179,4 +186,28 @@ nav ul li:hover ul {
     padding: 10px;
     flex-basis: 50%;
     border-radius: 5px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width:800px) {
+    header>* {
+        padding-bottom: 8px;
+    }
+
+    .search,
+    .search input[type="text"] {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav ul li:not(:last-child) {
+        padding-right: 5px;
+    }
+
 }
