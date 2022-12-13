@@ -4,7 +4,9 @@ var filesToCache = [
     './index.html',
     './style.css',
     './main.js',
-    'https://kit.fontawesome.com/a131e7076c.js'
+    './script.js',
+    'https://kit.fontawesome.com/a131e7076c.js',
+    'https://fakestoreapi.com/products'
 ];
 
 /* Start the service worker and cache all of the app's content */
