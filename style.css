@@ -4,62 +4,73 @@
     box-sizing: border-box;
     font-weight: bold;
     font-family: sans-serif;
-}
+  }
 
-header {
+  header {
     color: white;
     background-color: rgb(40, 116, 240);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-weight: bold;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 3;
-}
+  }
 
-.logo {
+  .responsive_menu,
+  .burger_menu {
+    display: none;
+  }
+
+  .logo {
     display: flex;
     flex-direction: column;
-}
+  }
 
-.logo a {
+  .logo a {
     text-decoration: none;
     color: white;
     font-style: italic;
     font-size: 13px;
-}
+  }
 
-.logo a span {
+  .logo a span {
     color: rgb(80, 230, 255);
-}
+  }
 
-.logo a:hover {
+  .logo a:hover {
     text-decoration: underline;
-}
+  }
+  nav {
+    display: flex;
+  }
+  nav ul li:last-child {
+    display: none;
+  }
 
-nav ul li {
+  nav ul li {
     font-weight: bold;
     display: inline;
     padding-left: 20px;
     cursor: pointer;
-}
+  }
 
-nav ul ul li {
+  nav ul ul li {
     display: block;
     height: 30px;
     margin-top: 20px;
     border-bottom: 1px solid lightgrey;
     width: 230px;
-}
+  }
 
-nav ul ul {
+  nav ul ul {
     display: none;
-}
+  }
 
-nav ul li:hover ul {
+  nav ul li:hover ul {
     display: block;
     position: absolute;
     background-color: white;
@@ -68,49 +79,55 @@ nav ul li:hover ul {
     margin: 0;
     padding: 0;
     border-radius: 5px;
-}
+  }
+  .mobnav {
+    display: none;
+  }
 
-#moresub {
+  #moresub {
     display: none;
     position: absolute;
     right: 100px;
     border-radius: 5px;
-}
+  }
 
-.more:hover #moresub {
+  .more:hover #moresub {
     display: block;
-}
+  }
 
-.search {
+  .search {
     display: flex;
+    align-items: center;
     border: none;
     border-radius: 5px;
-}
+  }
 
-.search input[type="text"] {
+  .search input[type="text"] {
     width: 700px;
     height: 32px;
     border: none;
     outline: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-}
+  }
 
-.search button i {
-    color: rgb(40, 116, 240);
-    height: 30px;
-    font-size: 25px;
+  .search button {
     border: none;
-}
-
-.search button {
-    border: none;
+    width: 40px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-}
+  }
 
+  .search button i {
+    color: rgb(40, 116, 240);
+    height: 32px;
+    font-size: 25px;
+    border: none;
+    text-align: center;
+    line-height: 32px;
+  }
 
-.login input[type="button"] {
+  .login button {
     width: 130px;
     font-weight: bold;
     background-color: white;
@@ -118,57 +135,110 @@ nav ul li:hover ul {
     padding: 10px 30px;
     border: none;
     border-radius: 5px;
-}
+  }
+  .mobnav {
+    color: white;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 70%;
+  }
 
-#cards {
+  .headmobnav {
+    background-color: rgb(40, 116, 240);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+  }
+  .fa-circle-user {
+    font-size: 20px;
+  }
+  .headmobnav img {
+    vertical-align: middle;
+    height: 30px;
+  }
+  .mobnav ul {
+    background-color: white;
+  }
+  .mobnav ul li {
+    list-style: none;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .mobnav ul li a {
+    text-decoration: none;
+    color: gray;
+  }
+  .NEW {
+    background-color: red;
+    color: white;
+    border-radius: 2px;
+  }
+  .border {
+    border-bottom: 1px solid gray;
+  }
+
+  #cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 180px;
     gap: 20px;
-}
-
-.card {
+  }
+  .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1 0 23%;
-    box-shadow: 0 0 4px 3px pink;
     text-align: center;
     padding: 1.5em;
-}
+    box-shadow: rgb(40 116 240) 0px 0px 4px 3px;
+  }
+  .card:hover {
+    box-shadow: 0 0 4px 3px orangered;
+  }
 
-.title {
+  .title {
     font-size: 1.3rem;
-}
+    color: rgb(109, 117, 207);
+  }
+  .category {
+    color: rgb(25, 155, 226);
+  }
+  .rating {
+    color: rgb(40, 116, 240);
+  }
+  .price_value {
+    color: red;
+  }
 
-.category,
-.price,
-.rating {
+  .category,
+  .price,
+  .rating {
     font-weight: bold;
     text-transform: capitalize;
     margin: 1em;
     font-size: 1.2rem;
-}
-
-.images {
+  }
+  .images {
     width: 50%;
     height: 30%;
-}
-
-.count {
+  }
+  .count {
     color: rgb(113, 113, 113);
-}
-
-.addBuy {
+    color: rgb(73, 220, 251);
+  }
+  .addBuy {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-}
-
-.addtocart {
+    gap: 10px;
+  }
+  .addtocart {
     background-color: white;
     color: black;
     font-size: large;
@@ -178,9 +248,12 @@ nav ul li:hover ul {
     flex-basis: 50%;
     border-radius: 5px;
     white-space: nowrap;
-}
-
-.buynow {
+  }
+  .addtocart:hover {
+    background-color: black;
+    color: white;
+  }
+  .buynow {
     background-color: orangered;
     color: white;
     font-size: large;
@@ -189,27 +262,97 @@ nav ul li:hover ul {
     flex-basis: 50%;
     border-radius: 5px;
     white-space: nowrap;
-}
+  }
+  .buynow:hover {
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+  }
 
-@media screen and (max-width:800px) {
-    header>* {
-        padding-bottom: 8px;
+  @media screen and (max-width: 768px) {
+    header {
+      justify-content: space-between;
+    }
+    header > * {
+      padding-bottom: 8px;
     }
 
+    .burger_menu {
+      display: block;
+    }
+
+    .burger_menu::before {
+      content: "\2261";
+      font-size: 40px;
+      color: rgb(80, 230, 255);
+    }
+
+    .responsive_menu:checked + label::before {
+      content: "\00d7";
+    }
+
+    .mobnav {
+      display: none;
+    }
+
+    .responsive_menu:checked ~ .mobnav {
+      display: block;
+    }
+    .login {
+      justify-content: flex-start;
+      flex-grow: 1;
+    }
+
+    .logo a {
+      font-size: 6px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .search {
+      order: 3;
+    }
     .search,
     .search input[type="text"] {
-        width: 100%;
+      width: 100%;
     }
 
+    .login button {
+      padding: 0;
+      color: white;
+      background-color: transparent;
+      width: auto;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav {
+      flex-wrap: wrap-reverse;
+    }
     nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    nav ul li {
+      padding: 5px;
+    }
+    nav ul li:hover ul{
+      display: none;
+    }
+
+    nav ul li:last-child {
+      display: block;
     }
 
     nav ul li:not(:last-child) {
-        padding-right: 5px;
+      padding-right: 5px;
     }
-
-}
+    nav ul li:nth-child(2) {
+      display: none;
+    }
+    nav ul li:nth-child(3) {
+      display: none;
+    }
+  }

@@ -11,7 +11,7 @@
     ></script>
     <link
       rel="shortcut icon"
-      href="./img/fetch-apidataonline-store.png"
+      href="../img/fetch-apidataonline-store.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
@@ -28,6 +28,54 @@
   </head>
   <body>
     <header>
+      <input
+        type="checkbox"
+        name=""
+        id="responsive_menu"
+        class="responsive_menu"
+      />
+      <label for="responsive_menu" class="burger_menu"></label>
+
+      <div class="mobnav">
+        <ul>
+          <div class="headmobnav">
+            <span><i class="fa-regular fa-circle-user"></i></span>
+            <span>Login & Signup</span>
+            <img src="./img/fetch-apidataonline-store.png" alt="" />
+          </div>
+          <li><a href="##SuperCoinZone" target="_blank">SuperCoin Zone</a></li>
+          <li class="border">
+            <a href="##StorePlusZone" target="_blank">Store Plus Zone</a>
+          </li>
+          <li><a href="##AllCategories" target="_blank">All Categories</a></li>
+          <li>
+            <a href="##TrendingStoresNEW" target="_blank"
+              >Trending Stores <span class="NEW">NEW</span>
+            </a>
+          </li>
+          <li class="border">
+            <a href="##MoreonFlipkart" target="_blank">More on Flipkart</a>
+          </li>
+          <li class="border">
+            <a href="##ChooseLanguage" target="_blank">Choose Language</a>
+          </li>
+          <li><a href="##OfferZone" target="_blank">Offer Zone</a></li>
+          <li class="border">
+            <a href="##SellonFlipkart" target="_blank">Sell on Flipkart</a>
+          </li>
+          <li><a href="##MyOrders" target="_blank">My Orders</a></li>
+          <li><a href="##Coupons" target="_blank">Coupons</a></li>
+          <li><a href="##MyCart" target="_blank">My Cart</a></li>
+          <li><a href="##MyWishlist" target="_blank">My Wishlist</a></li>
+          <li><a href="##MyAccount" target="_blank">My Account</a></li>
+          <li class="border">
+            <a href="##MyNotifications" target="_blank">My Notifications</a>
+          </li>
+          <li><a href="##HelpCentre" target="_blank">Help Centre</a></li>
+          <li><a href="##Legal" target="_blank">Legal</a></li>
+        </ul>
+      </div>
+
       <div class="logo">
         <img src="./img/fetch-apidataonline-store.png" alt="" />
         <a href="">Explore<span>Store</span> <sup>+</sup></a>
@@ -38,6 +86,7 @@
           type="text"
           placeholder="Search for products, brands and more"
           name="search"
+          id="filterInput"
         />
         <button type="submit"><i class="fas fa-search"></i></button>
       </div>
@@ -45,7 +94,7 @@
       <nav>
         <ul>
           <li class="login">
-            <input type="button" value="Login" />
+            <button>Login</button>
 
             <ul id="loginsub">
               <li>
@@ -75,13 +124,15 @@
             </ul>
           </li>
 
-          <li><i class="fas fa-shopping-cart"></i>Cart</li>
+          <li><i class="fas fa-shopping-cart"></i>&nbsp;Cart</li>
+
+          <li><i class="fa-solid fa-square-plus"></i></li>
         </ul>
       </nav>
     </header>
-    <div id="cards"></div>
+    <div id="cards" class="cards"></div>
 
-    <script src="script.js"></script>
-    <script src="main.js"></script>
+    <script src="./script.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
