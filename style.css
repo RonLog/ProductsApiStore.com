@@ -191,6 +191,7 @@
     align-items: center;
     justify-content: center;
     flex: 1 0 23%;
+    max-width: 320px;
     text-align: center;
     padding: 1.5em;
     box-shadow: rgb(40 116 240) 0px 0px 4px 3px;
