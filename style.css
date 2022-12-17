@@ -96,6 +96,10 @@ nav ul li:hover ul {
   display: block;
 }
 
+.fa-user-circle, .fa-plus-square{
+  color:red;
+}
+
 .search {
   display: flex;
   align-items: center;
@@ -221,7 +225,7 @@ img {
 }
 
 .slideshow-container {
-max-width: 90%;
+max-width: 100%;
 position: relative;
 margin: 40px auto;
 }
@@ -470,6 +474,8 @@ to {opacity: 1}
 
   nav {
     flex-wrap: wrap-reverse;
+    flex-grow: 1;
+    justify-content: center;
   }
 
   nav ul {
@@ -478,6 +484,7 @@ to {opacity: 1}
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+    gap: 30px;
   }
 
   nav ul li {
