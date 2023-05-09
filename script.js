@@ -157,25 +157,30 @@ function createRatingElement(numberOfStars) {
 function addElement(appendIn, value) {
     let div = document.createElement("div");
     div.className = "card";
-  
+
     let { image, title, category, price, rating } = value;
-  
+
     div.innerHTML = `
-      <h1 class="title">${title}</h1>
-      <img src="${image}" alt="img" class="images" />
-      <p class="category">${category}</p>
-      <div class="banner-section" id="img-container"></div>
-      <p class="price">price: <span class="price_value">$ ${price}</span></p>
-      <div class="addBuy">
-        <p class="addtocart">Add to Cart</p>
-        <p class="buynow">Buy Now</p>
-      </div>
-    `;
-  
+                <h1 class="title">${title}</h1>
+                <img src="${image}" alt="img" class="images" />
+                <p class="category">${category}</p>
+                <div class="banner-section" id="img-container"></div>
+                <p class="price">price: <span class="price_value">$ ${price}</span></p>
+                <div class="addBuy">
+                  <p class="addtocart">Add to Cart</p>
+                  <p class="buynow">Buy Now</p>
+                </div>
+            `;
+
+    // create rating element
+    let ratingElement = document.createElement('div');
+    ratingElement.className = 'rating';
+    createRatingElement(rating, ratingElement);
+    div.appendChild(ratingElement);
+
     appendIn.appendChild(div);
-  
-    createRatingElement(rating); // create rating element dynamically
-  }
+}
+
 
   
 function filterProducts() {
