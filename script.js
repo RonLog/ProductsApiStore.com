@@ -108,16 +108,30 @@ function buildRating(data) {
   });
 }
 
+// function createRatingElement(numberOfStars) {
+//   var wrapper = document.createElement('div');
+//   for (var i = 1; i <= 5; i++) {
+//     var span = document.createElement('span')
+//     span.innerHTML = (i <= numberOfStars ? '★' : '☆');
+//     span.className = (i <= numberOfStars ? 'high' : '');
+//     wrapper.appendChild(span);
+//   }
+//   document.getElementById('img-container').appendChild(wrapper);
+// }
+
+
 function createRatingElement(numberOfStars) {
-  var wrapper = document.createElement('div');
-  for (var i = 1; i <= 5; i++) {
-    var span = document.createElement('span')
-    span.innerHTML = (i <= numberOfStars ? '★' : '☆');
-    span.className = (i <= numberOfStars ? 'high' : '');
-    wrapper.appendChild(span);
+    var wrapper = document.createElement('div');
+    wrapper.innerHTML = `<p>Rating: ${numberOfStars}/5</p>`;
+    for (var i = 1; i <= 5; i++) {
+      var span = document.createElement('span')
+      span.innerHTML = (i <= numberOfStars ? '★' : '☆');
+      span.className = (i <= numberOfStars ? 'high' : '');
+      wrapper.appendChild(span);
+    }
+    document.getElementById('img-container').appendChild(wrapper);
   }
-  document.getElementById('img-container').appendChild(wrapper);
-}
+  
 
 // get value from the api create dynamic element
 // function addElement(appendIn, value) {
