@@ -68,6 +68,9 @@ fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((json) => {
         console.log(json);
+
+        buildRating(json);
+
         // iterating products
         for (let value of json) {
             addElement(cards, value);
@@ -93,26 +96,74 @@ function filterProducts() {
     }
 }
 
+// fetch("https://fakestoreapi.com/products")
+//     .then((res) => res.json())
+//     .then((json) => {
+//         buildRating(json);
+//     });
+
+function buildRating(data) {
+  data.forEach(function(v) {
+    createRatingElement(v.rating.rate);
+  });
+}
+
+function createRatingElement(numberOfStars) {
+  var wrapper = document.createElement('div');
+  for (var i = 1; i <= 5; i++) {
+    var span = document.createElement('span')
+    span.innerHTML = (i <= numberOfStars ? '★' : '☆');
+    span.className = (i <= numberOfStars ? 'high' : '');
+    wrapper.appendChild(span);
+  }
+  document.getElementById('img-container').appendChild(wrapper);
+}
+
 // get value from the api create dynamic element
+// function addElement(appendIn, value) {
+//     let div = document.createElement("div");
+//     div.className = "card";
+
+//     let { image, title, category, price } = value;
+
+//     div.innerHTML = `
+//                 <h1 class="title">${title}</h1>
+//                 <img src="${image}" alt="img" class="images" />
+//                 <p class="category">${category}</p>
+//                 <div class="banner-section" id="img-container"></div>
+//                 <p class="price">price: <span class="price_value">$ ${price}</span></p>
+//                 <div class="addBuy">
+//                   <p class="addtocart">Add to Cart</p>
+//                   <p class="buynow">Buy Now</p>
+//                 </div>
+//             `;
+//     appendIn.appendChild(div);
+// }
+
 function addElement(appendIn, value) {
     let div = document.createElement("div");
     div.className = "card";
-
-    let { image, title, category, price } = value;
-
+  
+    let { image, title, category, price, rating } = value;
+  
     div.innerHTML = `
-                <h1 class="title">${title}</h1>
-                <img src="${image}" alt="img" class="images" />
-                <p class="category">${category}</p>
-                <p class="price">price: <span class="price_value">$ ${price}</span></p>
-                <div class="addBuy">
-                  <p class="addtocart">Add to Cart</p>
-                  <p class="buynow">Buy Now</p>
-                </div>
-            `;
+      <h1 class="title">${title}</h1>
+      <img src="${image}" alt="img" class="images" />
+      <p class="category">${category}</p>
+      <div class="banner-section" id="img-container"></div>
+      <p class="price">price: <span class="price_value">$ ${price}</span></p>
+      <div class="addBuy">
+        <p class="addtocart">Add to Cart</p>
+        <p class="buynow">Buy Now</p>
+      </div>
+    `;
+  
     appendIn.appendChild(div);
-}
+  
+    createRatingElement(rating); // create rating element dynamically
+  }
 
+  
 function filterProducts() {
     // remove all the childs from the current element
     while (cards.childNodes.length > 1) {
