@@ -164,7 +164,7 @@ function addElement(appendIn, value) {
                 <h1 class="title">${title}</h1>
                 <img src="${image}" alt="img" class="images" />
                 <p class="category">${category}</p>
-                <div class="banner-section" id="img-container"></div>
+                <div class="rating">${createRatingElement(rating)}</div>
                 <p class="price">price: <span class="price_value">$ ${price}</span></p>
                 <div class="addBuy">
                   <p class="addtocart">Add to Cart</p>
@@ -172,14 +172,9 @@ function addElement(appendIn, value) {
                 </div>
             `;
 
-    // create rating element
-    let ratingElement = document.createElement('div');
-    ratingElement.className = 'rating';
-    createRatingElement(rating, ratingElement);
-    div.appendChild(ratingElement);
-
     appendIn.appendChild(div);
 }
+
 
 
   
