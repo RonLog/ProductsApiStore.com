@@ -108,7 +108,7 @@ function buildRating(data) {
   });
 }
 
-// function createRatingElement(numberOfStars) {
+ function createRatingElement(numberOfStars) {
   var wrapper = document.createElement('div');
   for (var i = 1; i <= 5; i++) {
     var span = document.createElement('span')
