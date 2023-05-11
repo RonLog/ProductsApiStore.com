@@ -357,11 +357,6 @@ to {opacity: 1}
   height: 30%;
 }
 
-.count {
-  color: rgb(113, 113, 113);
-  color: rgb(73, 220, 251);
-}
-
 .addBuy {
   display: flex;
   width: 100%;
@@ -404,17 +399,13 @@ to {opacity: 1}
   border: 1px solid orangered;
 }
 
-/* span {
-  display: inline-block;
-  position: relative;
-  width: 1.2em;
-  height: 1.2em;
-  color: black;
+/* .count {
+  color: rgb(73, 220, 251);
 } */
 
-.high {
+/* .rating {
   color: rgb(217, 211, 0);
-}
+} */
 
 @media screen and (min-width:768px) and (max-width:1280px) {
   .offer {
